@@ -8,5 +8,12 @@
 <body>
 
 <header class="site-header">
+    <div class="contenedor">
+        <div class="barra-navegacion">
+            <div class="logo">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="logo alternativo">
+            </div>
+        </div>
+    </div>
     <h1>Site header</h1>
 </header>
