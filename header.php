@@ -13,6 +13,8 @@
             <div class="logo">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="logo alternativo">
             </div>
+            <nav>
+            </nav>
         </div>
     </div>
     <h1>Site header</h1>
