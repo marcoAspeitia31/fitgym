@@ -34,15 +34,16 @@ body {
     line-height: 2.0; /* a nice line-height */
     font-family: var(--fuenteSecundaria);
   }
+
 *, *:before, *:after{
     box-sizing: inherit;
 }
+
  /* Headings */
 h1, h2, h3, h4 {
     font-family: var(--fuentePrincipal);
     margin: 1rem 0;
     line-height: 1.2;
-    color: var(--colorPrimario);
 }
 
 h1 {font-size: 6rem;}
@@ -90,7 +91,7 @@ img{
     display: none;
 }
 
-@media (min-with: 768px) {
+@media (min-width: 768px) {
     .menu-principal{
         display: flex;
     }
