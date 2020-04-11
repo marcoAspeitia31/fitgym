@@ -13,7 +13,7 @@ add_action('init', 'fitgym_menus'); //hook para agregar funciones, init cuando g
 function fitgym_scripts_styles() {
 wp_enqueue_style('normalize', get_template_directory_uri() . '/css/normalize.css', array(), '8.0.1');
 
-wp_enqueue_style('googleFont', 'https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap', array(), '1.0.0');
+wp_enqueue_style('googleFont', 'https://fonts.googleapis.com/css?family=Open+Sans|Raleway:400,700,900|Staatliches&display=swap', array(), '1.0.0');
 
     //hoja de estilos principal
     wp_enqueue_style('style', get_stylesheet_uri(), array('normalize, googleFont'), '1.0.0');
