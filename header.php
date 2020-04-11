@@ -24,5 +24,4 @@
             ?>
         </div>
     </div>
-    <h1>Encabezado principal</h1>
 </header>

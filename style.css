@@ -1,5 +1,5 @@
 /*
-    Theme Name: fitgym
+    Theme Name: Fitgym
     Theme URI:
     Author: Marco Antonio Aspeitia Peña
     Author URI:
@@ -62,4 +62,36 @@ ul{
     list-style: none;
     margin: 0;
     padding: 0;
+}
+ /*de este modo todas las imágenes van a ser responsivas*/
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.contenedor{
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+/*Header*/
+.site-header{
+    background-color: var(--colorTerciario);
+    padding: 2rem 0;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+}
+
+/*Menu principal*/
+.menu{
+    display: none;
+}
+
+@media (min-with: 768px){
+    .menu {
+        display: block;
+    }
 }

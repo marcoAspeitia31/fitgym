@@ -15,9 +15,7 @@ function fitgym_scripts_styles() {
 
 wp_enqueue_style('googleFont', 'https://fonts.googleapis.com/css?family=Open+Sans|Raleway:400,700,900|Staatliches&display=swap', array(), '1.0.0');
 
-echo get_stylesheet_uri();
-
-    //hoja de estilos principal
+//hoja de estilos principal
     wp_enqueue_style('style', get_stylesheet_uri(), array('googleFont'), '1.0.0');
 }
 
