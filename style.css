@@ -33,6 +33,7 @@ body {
     font-size: 1.6rem; /* default font-size for document */
     line-height: 2.0; /* a nice line-height */
     font-family: var(--fuenteSecundaria);
+    background-color: red;
   }
 *, *:before, *:after{
     box-sizing: inherit;
@@ -86,12 +87,12 @@ img{
 }
 
 /*Menu principal*/
-.menu{
+.menu-principal{
     display: none;
 }
 
-@media (min-with: 768px){
-    .menu {
-        display: block;
+@media (min-with: 768px) {
+    .menu-principal{
+        display: flex;
     }
 }
