@@ -11,9 +11,7 @@
                 <?php the_content(); ?>
             <?php endwhile; ?>
         </div>
-        <aside class="sidebar">
-            <h1>Sidebar aquí</h1>
-        </asid>
+        <?php get_sidebar();  ?>
     </main>
 
 <?php get_footer(); ?>
