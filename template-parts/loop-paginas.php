@@ -11,7 +11,7 @@
                 $hora_inicio = get_field('hora_inicio');
                 $hora_fin = get_field('hora_fin');
         ?>
-            <p><?php the_field('dias_clase'); ?> - <?php echo $hora_inicio . " a " .  $hora_fin; //advanced custom fields ?></p>
+            <p class="informacion-clase"><?php the_field('dias_clase'); ?> - <?php echo $hora_inicio . " a " .  $hora_fin; //advanced custom fields ?></p>
         <?php
             }
         ?>

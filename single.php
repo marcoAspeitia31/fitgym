@@ -1,10 +1,8 @@
 <?php get_header(); ?>
-
-<?php while ( have_posts() ): the_post(); ?>
-    <h1> <?php the_title(); ?> </h1>
-    <?php the_content(); ?>
-    Escrito por: <?php the_author(); ?>
-    Fecha: <?php the_date(); ?>
-<?php endwhile; ?>
-
+    <main class="contenedor pagina seccion con-sidebar">
+        <div class="contenido-principal">
+            <?php get_template_part('template-parts/loop-paginas')?> 
+        </div>
+        <?php get_sidebar();  ?>
+    </main>
 <?php get_footer(); ?>

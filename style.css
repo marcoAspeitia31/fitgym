@@ -272,7 +272,13 @@ hr{
 .no-sidebar .contenido-principal{
     flex: 0 1 800px;
 }
-
+/*template de las clases*/
+.informacion-clase{
+    font-weight: 700;
+    font-family: var(--fuenteSecundaria);
+    font-size: 2.2rem;
+    text-align: center;
+}
 /*Clases*/
 .lista-clases{
     margin-top: 4rem;
