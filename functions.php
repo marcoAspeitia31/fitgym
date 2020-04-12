@@ -1,4 +1,8 @@
 <?php
+
+/* Consultas reutilizables */
+require get_template_directory() . '/inc/queries.php';
+
 //cuando tema es activado
 function fitgym_setup(){
     //habilitar imagenes destacadas

@@ -2,6 +2,8 @@
     <main class="contenedor pagina seccion con-sidebar">
         <div class="contenido-principal">
             <?php get_template_part('template-parts/loop-paginas')?> 
+
+            <?php fitgym_lista_clases(); ?>
         </div>
         <?php get_sidebar();  ?>
     </main>
