@@ -41,3 +41,25 @@ wp_enqueue_style('googleFont', 'https://fonts.googleapis.com/css?family=Open+San
 }
 
 add_action('wp_enqueue_scripts', 'fitgym_scripts_styles');
+
+// Definir zona de widgets
+
+function fitgym_widgets(){
+    register_sidebar(array(
+        'name' => 'Sidebar 1', //nombre del widget que se va a ver en el dashboard
+        'id' => 'sidebar_1',
+        'before_widget' => '<div class="widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ));
+    register_sidebar(array(
+        'name' => 'Sidebar 2', //nombre del widget que se va a ver en el dashboard
+        'id' => 'sidebar_2',
+        'before_widget' => '<div class="widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ));
+}
+add_action('widgets_init','fitgym_widgets');
