@@ -78,6 +78,22 @@ img{
 hr{
     border: 1px solid var(--colorPrimario);
 }
+.imagen-destacada{
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+/*Utilidades*/
+.text-center{
+    text-align: center;
+}
+.texto-primario{
+    color: var(--colorPrimario);
+}
+.seccion{
+    padding: 5rem 0;
+}
 
 /*Header*/
 .site-header{
@@ -227,5 +243,22 @@ hr{
     .copyright{
         font-size: 2.4rem;
         margin: 0;
+    }
+}
+
+/*Paginas*/
+.pagina h1{
+    margin-bottom: 4rem;
+}
+@media (min-width: 768px) {
+    .pagina.con-sidebar{
+        display: flex;
+        justify-content: space-between;
+    }
+    .con-sidebar .contenido-principal{
+        flex: 0 0 calc(65% - 2rem);
+    }
+    .con-sidebar .sidebar{
+        flex: 0 0 calc(35% - 2rem);
     }
 }
