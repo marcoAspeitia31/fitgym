@@ -1,5 +1,10 @@
-<?php get_header(); ?>
-    <main class="contenedor pagina seccion con-sidebar">
+
+<?php
+/*
+* Template Name: Contenido centrado (No sidebars)
+*/
+get_header(); ?>
+    <main class="contenedor pagina seccion no-sidebar">
         <div class="contenido-principal">
             <?php while ( have_posts() ): the_post(); ?>
                 <h1 class="text-center texto-primario"> <?php the_title(); ?> </h1>
@@ -11,6 +16,6 @@
                 <?php the_content(); ?>
             <?php endwhile; ?>
         </div>
-        <?php get_sidebar();  ?>
     </main>
+
 <?php get_footer(); ?>
