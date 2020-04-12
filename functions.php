@@ -1,11 +1,16 @@
 <?php
-
+//cuando tema es activado
+function fitgym_setup(){
+    //habilitar imagenes destacadas
+    add_theme_support('post-thumbnails');
+}
+add_action('after_setup_theme', 'fitgym_setup');
 // Menus de navegación, agregar más utilizando el arreglo
 function fitgym_menus(){
     register_nav_menus(array(
         'menu-principal' => __( 'Menu Principal', 'Fitgym' ),
         'menu-principal2' => __( 'Menu Principal2', 'Fitgym' )
-    ));      
+    ));
 }
 
 add_action('init', 'fitgym_menus'); //hook para agregar funciones, init cuando carque WP, y fitgym es nuestro Text domain
