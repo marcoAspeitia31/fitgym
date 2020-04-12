@@ -14,7 +14,7 @@ function fitgym_lista_clases(){ ?>
             $clases = new WP_Query($args); //el resultado va a  asignarse en la variable $clases)
             while($clases->have_posts()): $clases->the_post(); //the_post imprime título, contenido, imagen destacada.
         ?>
-            <li class="clase card">
+            <li class="clase card gradient">
                 <?php the_post_thumbnail('medium_theme'); ?>
                 <div class="contenido">
                     <a href="<?php the_permalink(); //nos va generar un enlace?>"> 
