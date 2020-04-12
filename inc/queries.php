@@ -14,8 +14,18 @@ function fitgym_lista_clases(){ ?>
             $clases = new WP_Query($args); //el resultado va a  asignarse en la variable $clases)
             while($clases->have_posts()): $clases->the_post(); //the_post imprime título, contenido, imagen destacada.
         ?>
-            <li>
-                <h1><?php the_title(); ?></h1>
+            <li class="clase card">
+                <?php the_post_thumbnail('medium_theme'); ?>
+                <div class="contenido">
+                    <a href="<?php the_permalink(); //nos va generar un enlace?>"> 
+                        <h3><?php the_title(); ?></h3>
+                    </a>
+                    <?php
+                        $hora_inicio = get_field('hora_inicio');
+                        $hora_fin = get_field('hora_fin');
+                    ?>
+                    <p><?php the_field('dias_clase'); ?> - <?php echo $hora_inicio . " a " .  $hora_fin; //advanced custom fields ?></p>
+                </div>
             </li>
             <?php
                 endwhile;
