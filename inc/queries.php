@@ -6,7 +6,7 @@ function fitgym_lista_clases(){ ?>
     <ul class="lista-clases"> 
         <?php
             $args = array(
-                'post_type' => 'gymfitness_clases', //consulta las clases de posttype gymfitness
+                'post_type' => 'fitgym_clases', //consulta las clases de post type de nuestro plugin fitgym
                 'post_per_page' => 10,
                 'orderby' => 'title',
                 'order' => 'ASC'
