@@ -383,3 +383,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
     font-weight: 700;
     font-size: 1.4rem;
 }
+/*Galeria*/
+.galeria-imagenes{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /*repetir 2 veces una fraccion en la pantalla*/
+    grid-template-rows: repeat(6,auto);
+    grid-gap: 2rem;
+    grid-gap: 2rem;
+}
+@media (min-width: 768px) {
+    .galeria-imagenes{
+        grid-template-columns: repeat(4, 1fr);
+    }    
+}
+.galeria-imagenes img{
+    display: block;
+}
