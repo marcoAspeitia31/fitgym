@@ -32,12 +32,19 @@ wp_enqueue_style('normalize', get_template_directory_uri() . '/css/normalize.css
 wp_enqueue_style('slicknavCss', get_template_directory_uri() . '/css/slicknav.min.css', array(), '1.0.10');
 wp_enqueue_style('googleFont', 'https://fonts.googleapis.com/css?family=Open+Sans|Raleway:400,700,900|Staatliches&display=swap', array(), '1.0.0');
 
-//hoja de estilos principal
+    //hoja de estilos principal
     wp_enqueue_style('style', get_stylesheet_uri(), array('normalize','googleFont'), '1.0.0');
-
+    //agregar hoja de estilos sólo a una página en particular
+    if(is_page('galeria')):
+        wp_enqueue_style('lightboxCss', get_template_directory_uri() . '/css/lightbox.min.css', array(), '2.11.1');
+    endif;
     //hoja de scripts
     wp_enqueue_script('slicknavJs', get_template_directory_uri() . '/js/jquery.slicknav.min.js', array('jquery'), '1.0.10', true);
     wp_enqueue_script('scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery','slicknavJs'), '1.0.0', true);
+    //agregar hoja de estilos sólo a una página en particular
+    if(is_page('galeria')):
+        wp_enqueue_script('lightboxJs', get_template_directory_uri() . '/js/lightbox.min.js', array('jquery'), '2.11.1', true);
+    endif;
 }
 
 add_action('wp_enqueue_scripts', 'fitgym_scripts_styles');
