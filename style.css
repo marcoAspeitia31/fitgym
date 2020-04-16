@@ -280,16 +280,19 @@ hr{
     text-align: center;
 }
 /*Clases*/
-.lista-clases{
+.lista-clases,
+.listado-blog{
     margin-top: 4rem;
 }
 @media (min-width: 768px) {
-    .lista-clases{
+    .lista-clases,
+    .listado-blog{
         display: flex;
         flex-wrap: wrap; /*Evita que están en forma horizontal y los pone en columnas*/
         justify-content: space-between;
     }
 }
+
 /*Cards*/
 @media (min-width: 768px) {
     .gradient::after{
@@ -310,18 +313,23 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 }
 .card{
     margin-bottom: 4rem;
+    border-bottom: 1px solid lightgray;
+}
+.card:last-of-type{
+    border-bottom: none;
 }
 @media (min-width: 768px) {
     .card {
         flex: 0 0 calc(50% - 2rem);
         position: relative; /*agregar para tener acceso a posiciones absolutas*/
+        border: none;
     }
 }
 .card img{
     display: block;
 }
 .card .contenido{
-    padding: 3rem;
+    padding: 2rem;
 }
 @media (min-width: 768px) {
     .card .contenido{
@@ -350,6 +358,23 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
     .card .contenido p{
         color: var(--colorPrimario)
     }
+}
+.card .contenido .meta,
+.card .contenido .meta a{
+    color: black;
+}
+.card .contenido .meta{
+    font-size: 1.4rem;
+}
+
+@media (min-width: 768px) {
+    .card .contenido .meta,
+    .card .contenido .meta a{
+        color: white;
+    }
+}
+.card .contenido .meta span{
+    color: var(--colorPrimario);
 }
 
 /*Clases sidebar*/
