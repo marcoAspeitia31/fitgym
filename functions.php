@@ -7,6 +7,8 @@ require get_template_directory() . '/inc/queries.php';
 function fitgym_setup(){
     //habilitar imagenes destacadas
     add_theme_support('post-thumbnails');
+    //habilita posicionamiento SEO
+    add_theme_support('title-tag');
 
     //agregar imágenes de tamaño personalizado
     add_image_size('square', 350, 350, true);
