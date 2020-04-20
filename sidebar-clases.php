@@ -2,4 +2,4 @@
     <?php
         dynamic_sidebar( 'sidebar_2' )
     ?>
-</asid>
+</aside>
