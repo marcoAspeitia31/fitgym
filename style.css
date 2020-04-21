@@ -512,3 +512,55 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
         grid-row: 2 / 4;
     }
 }
+
+/* Formulario */
+.wpcf7-form label{
+    font-weight: 700;
+}
+.wpcf7-form .wpcf7-form-control{
+    width: 100%;
+    padding: 1rem;
+    height: 4rem;
+    border-width: 0 0 2px 0;
+    border-bottom: solid 2px var(--colorPrimario);
+    outline: none;
+}
+.wpcf7-form .wpcf7-textarea{
+    height: 20rem;
+    border-width: 0 0 2px;
+    border-color: var(--colorPrimario);
+}
+
+.wpcf7-form .wpcf7-submit{
+    width: 100%;
+    background-color: var(--colorPrimario);
+    border-radius: .5rem;
+}
+.wpcf7-form .wpcf7-submit:hover{
+    cursor: pointer;
+}
+@media (min-width: 769px) {
+    .row{
+        width: 100%;
+        display: flex;
+    }
+    .column1{
+        width: 100%;
+        padding: 0 1rem 0 0;
+    }
+    .column2{
+        width: 100%;
+        padding: 0 0 0 1rem;
+    }
+    .wpcf7-form .wpcf7-submit{
+        width: 40%;
+    }
+}
+div.wpcf7-validation-errors{
+    background-color: #f7e700;
+    text-align: center;
+}
+div.wpcf7-mail-sent-ok{
+    background-color: #398f14;
+    text-align: center;
+}
