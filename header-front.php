@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
 
 <header class="site-header">
     <div class="contenedor">
@@ -22,6 +22,10 @@
                 );
                 wp_nav_menu($args);
             ?>
+        </div> <!--.barra-navegaion -->
+        <div class="tagline text-center">
+                <h1><?php the_field('encabezado_hero');?> </h1>
+                <p><?php the_field('contenido_hero')?></p>
         </div>
     </div>
 </header>

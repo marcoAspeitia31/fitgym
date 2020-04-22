@@ -181,6 +181,10 @@ hr{
     border-bottom: 3px solid var(--colorPrimario);
 }
 /*Reescribir estilos menu movil*/
+body.home .slicknav_menu{
+    background-color: transparent;
+}
+
 .slicknav_menu{
     background-color: var(--colorTerciario);
     display: flex;
