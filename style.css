@@ -535,6 +535,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
     width: 100%;
     background-color: var(--colorPrimario);
     border-radius: .5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
 }
 .wpcf7-form .wpcf7-submit:hover{
     cursor: pointer;
