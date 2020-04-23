@@ -86,10 +86,10 @@ function fitgym_hero_image(){
     wp_register_style('custom', false);
     wp_enqueue_style('custom');
 
-    //agregar css en php, inyecta código css sobre hoja de estilos custom
+    //agregar css en php, inyecta código css sobre hoja de estilos custom, será CSS inline y no se visualizará en style.css
     $imagen_destacada_css = "
     body.home .site-header {
-        background-image: linear-gradient( rgba(0,0,0,0.75), rgba(0,0,0,0.75) ) , url($imagen_front);
+        background-image: linear-gradient( rgba(0,0,0,0.65), rgba(0,0,0,0.65) ) , url($imagen_front);
     }
     ";
 

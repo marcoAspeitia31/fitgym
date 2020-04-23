@@ -96,6 +96,29 @@ hr{
 }
 
 /*Header*/
+body.home .site-header{
+    padding-top: 2rem;
+    height: auto; /*auto va a ajustar el tamaño de la imagen a la resolución de pantalla */
+    min-height: 70rem;
+    background-size: cover; /*cover toma todo el espacio disponible*/
+    background-position: center center; /* posicionar al centro arriba abajo e izquierda derecha */
+    background-repeat: no-repeat;
+}
+@media (min-width: 769px) {
+    body.home .site-header{
+        height: 100vh; /* 100vh va a tomar el tamaño de la imagen en un 100% */
+    }
+    .header-grid{
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* divide el grid en 4 columnas */
+        grid-template-rows: repeat(5, 1fr);
+    }
+    .header-grid .barra-navegacion{
+        grid-column: 1 / 5; /* barra de navegacion con logo y menu incluidos en la columna 1 a la 5 */
+    }
+}
+
 .site-header{
     background-color: var(--colorTerciario);
     padding: 2rem 0;
@@ -109,6 +132,20 @@ hr{
 .logo{
     display: flex;
     justify-content: center;
+}
+.tagline{
+    color: white;
+    margin-top: 5rem;
+}
+@media (min-width: 769px) {
+    .tagline{
+        grid-row: 3 / 4;
+        grid-column: 2 / 4;
+        margin-top: 0;
+    }
+}
+.tagline p{
+    font-size: 2rem;
 }
 
 /*Menu principal*/
