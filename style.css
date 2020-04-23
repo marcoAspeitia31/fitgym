@@ -608,3 +608,10 @@ div.wpcf7-mail-sent-ok{
     background-color: #398f14;
     text-align: center;
 }
+
+/* Front page */
+.bienvenida p{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
