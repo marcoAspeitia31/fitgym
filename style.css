@@ -615,3 +615,65 @@ div.wpcf7-mail-sent-ok{
     margin: 0 auto;
 }
 
+.contenedor-areas{
+    display: flex;
+    flex-wrap: wrap;
+}
+.contenedor-areas .area{
+    flex: 0 0 100%;
+    height: 250px;
+    position: relative; /* nos va a permitir encimar el estilo que se ponga en un position absolute*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (min-width: 468px) {
+    .contenedor-areas .area{
+        flex: 0 0 50%;
+    }
+}
+@media (min-width: 769px) {
+    .contenedor-areas .area{
+        flex: 0 0 25%;
+        height: 300px;
+    }
+}
+.contenedor-areas .area img{
+    height: 250px;
+    object-fit: cover;/* object-fit nos va a controlar a que las imágenes no se desproporcionen mientras se va reduciendo el tamaño de la pantalla */
+}
+@media (min-width: 769px) {
+    .contenedor-areas .area img{
+        height: 300px;
+    }
+}
+.contenedor-areas .area::after{
+    content: '';
+    background: linear-gradient( 
+        rgba(0,0,0,0.65),
+        rgba(0,0,0,0.65)
+    );
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0; /* nos va a poner el estilo degradado en el tope de donde empieza nuestra clase de estilos original */
+}
+.area p{
+    position: absolute;
+    z-index: 10;
+    margin: auto;
+    color: white;
+    font-size: 2rem;
+    font-weight: 900;
+}
+/* efecto en area */
+@media (min-width: 769px) {
+    .area p{
+        opacity: 0;
+        transition: opacity .5s ease-in-out; /* efecto de adentro hacia afuera de la clase area */
+    }
+    .area:hover p{
+        opacity: 1;
+    }
+}
