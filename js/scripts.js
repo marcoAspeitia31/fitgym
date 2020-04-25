@@ -3,4 +3,8 @@ jQuery(document).ready( $ =>{
         label: '',
         appendTo: '.site-header'
     });
+    /* agregar slider */
+    $('.listado-testimoniales').bxSlider({
+        auto: true /* hace que slider arranque automáticamente */
+    });
 });
