@@ -26,7 +26,7 @@ get_header(); ?>
                             //vamos a generar las imágenes grandes con:
                             $imagen = wp_get_attachment_image_src($id, 'full')[0];
                             /*
-                            el siguiente código sirve para debuguear
+                            el siguiente código sirve para debuguear 
                             echo "<pre>";
                             var_dump($imagenThumb);
                             echo "</pre>";
@@ -34,7 +34,7 @@ get_header(); ?>
                     ?>
                         <li>
                             <a href="<?php echo $imagen; ?>" data-lightbox="galeria">
-                                <img src="<?php echo $imagenThumb; ?>" alt="imagen">
+                                <img src="<?php echo $imagenThumb; ?>" alt="imagen" class="zoom">
                             </a>
                         </li>
                     <?php

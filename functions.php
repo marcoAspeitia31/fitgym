@@ -40,12 +40,20 @@ wp_enqueue_style('googleFont', 'https://fonts.googleapis.com/css?family=Open+San
     if(is_page('galeria')):
         wp_enqueue_style('lightboxCss', get_template_directory_uri() . '/css/lightbox.min.css', array(), '2.11.1');
     endif;
+    if(is_page('inicio')):
+        wp_enqueue_style('bxSliderCss', 'https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css', array(), '4.2.12');
+    endif;
+
+
     //hoja de scripts
     wp_enqueue_script('slicknavJs', get_template_directory_uri() . '/js/jquery.slicknav.min.js', array('jquery'), '1.0.10', true);
     wp_enqueue_script('scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery','slicknavJs'), '1.0.0', true);
     //agregar hoja de estilos sólo a una página en particular
     if(is_page('galeria')):
         wp_enqueue_script('lightboxJs', get_template_directory_uri() . '/js/lightbox.min.js', array('jquery'), '2.11.1', true);
+    endif;
+    if(is_page('inicio')):
+        wp_enqueue_script('bxSliderJs', 'https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js', array('jquery'), '4.2.12', true);
     endif;
 }
 
@@ -72,3 +80,27 @@ function fitgym_widgets(){
     ));
 }
 add_action('widgets_init','fitgym_widgets');
+
+/* Imagen hero */
+function fitgym_hero_image(){
+    //obtener id página principal
+    $front_page_id = get_option('page_on_front');
+    //Obtener id imagen
+    $id_imagen = get_field('imagen_hero', $front_page_id);
+    //obtener la imagen
+    $imagen_front = wp_get_attachment_image_src($id_imagen, 'full')[0];
+
+    //Style CSS
+    wp_register_style('custom', false);
+    wp_enqueue_style('custom');
+
+    //agregar css en php, inyecta código css sobre hoja de estilos custom, será CSS inline y no se visualizará en style.css
+    $imagen_destacada_css = "
+    body.home .site-header {
+        background-image: linear-gradient( rgba(0,0,0,0.65), rgba(0,0,0,0.65) ) , url($imagen_front);
+    }
+    ";
+
+    wp_add_inline_style('custom', $imagen_destacada_css);
+}
+add_action('init', 'fitgym_hero_image');
