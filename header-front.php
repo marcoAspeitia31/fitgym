@@ -12,7 +12,9 @@
     <div class="contenedor header-grid">
         <div class="barra-navegacion">
             <div class="logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="logo alternativo">
+                <a href="<?php echo esc_html(site_url('/')); ?>">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="logo alternativo">
+                </a>
             </div>
             <?php
                 $args = array(

@@ -396,6 +396,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 .card{
     margin-bottom: 4rem;
     border-bottom: 1px solid lightgray;
+    overflow: hidden;
 }
 .card:last-of-type{
     border-bottom: none;
@@ -409,6 +410,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 }
 .card img{
     display: block;
+    transition: transform .5s ease;
+}
+.card:hover img{
+    transform: scale(1.1);
 }
 .card .contenido{
     padding: 2rem;
@@ -803,8 +808,13 @@ div.wpcf7-mail-sent-ok{
 }
 .testimonial blockquote{
     position: relative;
-    padding-left: 12rem;
 }
+@media (min-width: 768px) {
+    .testimonial blockquote{
+        padding-left: 12rem;
+    }
+}
+
 .testimonial blockquote::before{
     position: absolute;
     content: '';
@@ -813,8 +823,12 @@ div.wpcf7-mail-sent-ok{
     left: 0;
     width: 10rem;
     height: 9rem;
-    background-image: url(img/quote.svg);
-    background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+    .testimonial blockquote::before{
+        background-image: url(img/quote.svg);
+        background-repeat: no-repeat;
+    }
 }
 .testimonial-footer img{
     margin: 0 auto;
@@ -829,11 +843,15 @@ div.wpcf7-mail-sent-ok{
 /* 
 éste código solo funciona en Aditional CSS in customizing WP page
 .bx-wrapper{
-    background: transparent;
-      border: none;
-      box-shadow: none;
+  background: transparent;
+	border: none;
+	box-shadow: none;
 }
-.bx-wrapper .bx-pager.bx-default-pager a{
-    background: white;
+.bx-wrapper .bx-pager.bx-default-pager a,
+.bx-wrapper .bx-pager.bx-default-pager a:hover{
+	background: white;
+}
+.bx-wrapper .bx-pager.bx-default-pager a.active{
+	background: orange;
 }
 */
