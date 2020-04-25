@@ -732,6 +732,7 @@ div.wpcf7-mail-sent-ok{
     .listado-instructores li{
         flex: 0 0 calc(50% - 2rem);
         border-bottom: none;
+        position: relative;
     }
 }
 .instructor img{
@@ -741,4 +742,35 @@ div.wpcf7-mail-sent-ok{
 }
 .instructor .contenido{
     padding: 3rem;
+}
+@media (min-width: 768px) {
+    .instructor .contenido{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.65);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        opacity: 0; /* oculta el contenido */
+        transition: opacity .5s ease-in-out;
+    }
+    .instructor:hover .contenido{
+        opacity: 1;
+    }
+}
+
+.etiqueta{
+    margin-right: 2rem;
+    background-color: var(--colorPrimario);
+    color: white;
+    font-family: var(--fuentePrincipal);
+    font-size: 2.2rem;
+    padding: .5rem 2rem;
+    border-radius: .5rem;
+}
+.etiqueta:last-of-type{
+    margin-right: 0;
 }
