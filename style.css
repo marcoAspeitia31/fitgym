@@ -94,6 +94,33 @@ hr{
 .seccion{
     padding: 5rem 0;
 }
+.contenedor-boton{
+    display: flex;
+    justify-content: flex-end;
+}
+/* Boton */
+.boton{
+    background-color: white;
+    color: black;
+    padding: 1rem 3rem;
+    display: block;
+    flex: 1;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: .5rem;
+}
+@media (min-width: 769px) {
+    .boton{
+        display: inline-block;
+        flex: 0 0 auto;
+    }
+}
+.boton-primario{
+    background-color: var(--colorPrimario);
+    color:white;
+}
 
 /*Header*/
 body.home .site-header{
@@ -532,8 +559,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 }
 .galeria-imagenes img{
     display: block;
-}
 
+}
+.galeria-imagenes li{
+    overflow: hidden;
+}
 .galeria-imagenes li:nth-child(4){
     grid-row: 2 / 4;
     grid-column: 2 / 3;
@@ -552,6 +582,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
         grid-column: 2 / 3;
         grid-row: 2 / 4;
     }
+}
+@media (min-width: 769px) {
+    .zoom{
+        transition: transform .5s ease;
+    }
+    .zoom:hover{
+        transform: scale(1.2);
+    }    
 }
 
 /* Formulario */
@@ -667,7 +705,6 @@ div.wpcf7-mail-sent-ok{
     font-size: 2rem;
     font-weight: 900;
 }
-/* efecto en area */
 @media (min-width: 769px) {
     .area p{
         opacity: 0;
@@ -676,4 +713,7 @@ div.wpcf7-mail-sent-ok{
     .area:hover p{
         opacity: 1;
     }
+}
+.clases{
+    background-color: lightgray;
 }

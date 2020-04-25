@@ -34,7 +34,7 @@ get_header(); ?>
                     ?>
                         <li>
                             <a href="<?php echo $imagen; ?>" data-lightbox="galeria">
-                                <img src="<?php echo $imagenThumb; ?>" alt="imagen">
+                                <img src="<?php echo $imagenThumb; ?>" alt="imagen" class="zoom">
                             </a>
                         </li>
                     <?php

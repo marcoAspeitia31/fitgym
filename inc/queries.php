@@ -2,12 +2,12 @@
 
 //consulta a la base de datos para traernos los resultados del custom post type
 //abrir documentacipin de wp query en wordpress.org
-function fitgym_lista_clases(){ ?>
+function fitgym_lista_clases($cantidad = -1){ ?> <!-- /* esto significa va a traerse todas las clases siempre y cuando se mande a llamar con valor nulo fitgym_lista_clases(), de lo contrario se va a traer el valor correspondiente fitgym_lista_clases(4) se va a traer 4 objetos */ -->
     <ul class="lista-clases"> 
         <?php
             $args = array(
                 'post_type' => 'fitgym_clases', //consulta las clases de post type de nuestro plugin fitgym
-                'post_per_page' => 10,
+                'posts_per_page' => $cantidad,
                 'orderby' => 'title',
                 'order' => 'ASC'
             );

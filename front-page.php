@@ -42,4 +42,17 @@
         </li>
     </ul>
 </div>
+<section class="clases">
+    <div class="contenedor seccion">
+        <h2 class="text-center texto-primario">Nuestras clases</h2>
+        <?php fitgym_lista_clases(4); ?> <!-- nos va a traer el querie lista_clases con los parámetros que ya hemos configurado -->
+        <div class="contenedor-boton">
+            <a href="<?php echo esc_url( get_permalink( get_page_by_title('Nuestras Clases') ) );?>" 
+                class="boton boton-primario"><!-- Boton para obtener el permalink de una pagina con título Nuestras Clases con escape de url -->
+                Ver todas las clases
+            </a>
+        </div>
+    </div>
+</section>
+
 <?php get_footer(); ?>
