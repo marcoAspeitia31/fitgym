@@ -55,4 +55,44 @@
     </div>
 </section>
 
+<section class="instructores">
+    <div class="contenedor seccion">
+        <h2 class="text-center texto-primario">Nuestros instructores</h2>
+        <p class="text-center">Instructores profesionales que te ayudarán a lograr tus objetivos</p>
+        <ul class="listado-instructores">
+            <!-- vamos a acceder al post type creado en el plugin fitgym_post_types -->
+            <?php
+                $args = array(
+                    'post_type' => 'instructores', /* nombre del post type */
+                    'posts_per_page' => 30
+                );
+                $instructores = new WP_Query($args); /* le vamos a pasar el query del arreglo a un objeto llamado $instructores */
+                while($instructores->have_posts()): $instructores->the_post(); /* y aquí se va a comprobar si existen posts se va a realizar la asignación the_post()
+                al objeto $instructores por cada iteración */
+            ?>
+            <li class="instructor">
+                <?php the_post_thumbnail('medium_theme');?>
+                <div class="contenido text-center">
+                    <h3><?php the_title(); /* nos va a mostrar el título de cada post type */?></h3>
+                    <?php the_content(); /* nos muestra el contenido de la caja de texto del post type */?>
+                    <div class="especialidad">
+                        <?php
+                            $esp = get_field('especialidad'); /* especialidad se obtiene del nombre del grupo de custom fields */
+                            /* var_dump($esp); para debugear */
+                            foreach($esp as $esp):
+                        ?>
+                                <span class="etiqueta">
+                                    <?php echo esc_html($esp);?>
+                                </span>
+                        <?php
+                            endforeach;
+                        ?>
+                    </div>
+                </div>
+            </li>
+            <?php endwhile; wp_reset_postdata(); /* wp_reset_postdata() resetea las consultas personalizadas y retorna a standares de WP */?>
+        </ul>
+    </div>
+</section>
+
 <?php get_footer(); ?>
