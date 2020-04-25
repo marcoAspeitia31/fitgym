@@ -91,6 +91,9 @@ hr{
 .texto-primario{
     color: var(--colorPrimario);
 }
+.texto-blanco{
+    color: white;
+}
 .seccion{
     padding: 5rem 0;
 }
@@ -774,3 +777,63 @@ div.wpcf7-mail-sent-ok{
 .etiqueta:last-of-type{
     margin-right: 0;
 }
+.bx-wrapper {
+    background: transparent;
+    border: 25px solid black;
+}
+/* Testimoniales */
+.testimoniales{
+    background: linear-gradient(
+        rgba(0,0,0,0.65),
+        rgba(0,0,0,0.65)
+    ), url(img/testimonial-bg.jpg);
+    padding: 10rem 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.contenedor-testimoniales{
+    max-width: 80rem;
+    margin: 0 auto; /* posiciona al centro a nuestro contenedor */
+}
+.testimonial{
+    color: white;
+    display: block;
+    justify-content: center;
+}
+.testimonial blockquote{
+    position: relative;
+    padding-left: 12rem;
+}
+.testimonial blockquote::before{
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    left: 0;
+    width: 10rem;
+    height: 9rem;
+    background-image: url(img/quote.svg);
+    background-repeat: no-repeat;
+}
+.testimonial-footer img{
+    margin: 0 auto;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+}
+.testimonial-footer p{
+    color: #ff6a00;
+    font-weight: 700;
+}
+/* 
+éste código solo funciona en Aditional CSS in customizing WP page
+.bx-wrapper{
+    background: transparent;
+      border: none;
+      box-shadow: none;
+}
+.bx-wrapper .bx-pager.bx-default-pager a{
+    background: white;
+}
+*/

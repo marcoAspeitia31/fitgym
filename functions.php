@@ -41,7 +41,7 @@ wp_enqueue_style('googleFont', 'https://fonts.googleapis.com/css?family=Open+San
         wp_enqueue_style('lightboxCss', get_template_directory_uri() . '/css/lightbox.min.css', array(), '2.11.1');
     endif;
     if(is_page('inicio')):
-        wp_enqueue_style('bxSliderJs','https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css', array(), '4.2.12');
+        wp_enqueue_style('bxSliderCss', 'https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css', array(), '4.2.12');
     endif;
 
 

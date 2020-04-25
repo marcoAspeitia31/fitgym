@@ -5,6 +5,6 @@ jQuery(document).ready( $ =>{
     });
     /* agregar slider */
     $('.listado-testimoniales').bxSlider({
-        auto: true /* hace que slider arranque automáticamente */
+        /*auto: true /* hace que slider arranque automáticamente */
     });
 });
